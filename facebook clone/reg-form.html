@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg-form.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <h1>Registration Form</h1>
+  <div class="form-container">
+    <form name="registerForm" action="login1.html">
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Logan" required/><p class="error-message"></p>
+      <label for="lastName">Last Name *</label>
+      <input type="text" id="lastName" placeholder="RM" required/>
+      <p class="error-message"></p>
+      <label for="e-mail">E-mail address *</label>
+      <input type="text" id="e-mail" placeholder="logan-rm@gmail.com" required/>
+      <p class="error-message"></p>
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" maxlength="10" pattern=".{9,}"   required title="10 characters length"placeholder="1234567890"/>
+      <p class="error-message"></p>
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="INDIA"/>
+      <p class="error-message"></p>
+      <label for="password">Password *</label>
+      <input type="password" id="password" pattern="/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$/"   required title="8 characters minimum"/>
+      <p class="error-message"></p>
+      <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
+        <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+     </form>
+     <div class="reg-acc-login">
+        <p>Already have a account </p>
+        <a href="login1.html"> <span>SIGNIN</span></a>
+     </div>
+     
+  </div>
+  <script src="reg-form.js"></script>
+</body>
+</html>
